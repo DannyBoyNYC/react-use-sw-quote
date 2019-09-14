@@ -1,6 +1,6 @@
 # @devereld/react-use-sw-quote
 
-> a custom react hook the returns a random star wars quote
+> a custom react hook that returns a random star wars quote
 
 [![NPM](https://img.shields.io/npm/v/@devereld/react-use-sw-quote.svg)](https://www.npmjs.com/package/@devereld/react-use-sw-quote) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
