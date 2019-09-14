@@ -15,10 +15,10 @@ npm install --save @devereld/react-use-sw-quote
 ```jsx
 import React, { Component } from 'react'
 
-import { useMyHook } from '@devereld/react-use-sw-quote'
+import { useStarWarsQuote } from '@devereld/react-use-sw-quote'
 
 const Example = () => {
-  const example = useMyHook()
+  const {loading, quote} = useStarWarsQuote()
   return (
     <div>{example}</div>
   )
