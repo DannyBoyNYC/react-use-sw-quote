@@ -1,12 +1,13 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 
 export function useStarWarsQuote(initialValue) {
   const [quote, setQuote] = useState('');
   const [loading, setLoading] = useState(false);
 
   React.useEffect(() => {
-    async function getStarWarsQuote() {
+    async function getStarsWarsQuote() {
       setLoading(true);
+      // Get placeholder text
       const response = await fetch(
         'http://swquotesapi.digitaljedi.dk/api/SWQuote/RandomStarWarsQuote'
       );
@@ -15,7 +16,7 @@ export function useStarWarsQuote(initialValue) {
       setQuote(quote);
       setLoading(false);
     }
-    getStarWarsQuote();
+    getStarsWarsQuote();
   }, [setQuote]);
 
   return { quote, loading };

@@ -13,16 +13,27 @@ npm install --save @devereld/react-use-sw-quote
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React from 'react'
+import { useStarWarsQuote } from '@jsjoeio/react-use-sw-quote'
 
-import { useStarWarsQuote } from '@devereld/react-use-sw-quote'
+const App = () => {
+  const { quote, loading } = useStarWarsQuote('')
+  // Quote returns a random quote as a string
+  // loading returns a boolean
 
-const Example = () => {
-  const {loading, quote} = useStarWarsQuote()
-  return (
-    <div>{example}</div>
-  )
+  if (loading) {
+    return <div>Loading...</div>
+  }
+
+  if (quote) {
+    return <div>
+      {quote}
+    </div>
+  }
+
+  return null
 }
+export default App
 ```
 
 ## License
